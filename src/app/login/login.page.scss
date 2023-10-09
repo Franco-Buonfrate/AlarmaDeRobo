@@ -1,0 +1,30 @@
+ion-content{
+    --ion-background-color:#050839;
+}
+
+.login-form{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo{
+    width: 200px;
+    justify-content: center;
+    margin: auto;
+}
+
+.password-input, .email-input{
+    border: 1px solid #00A7E1;
+    border-radius: 6px ;
+    padding: 0 10px;
+    background-color: #007EA7;
+    color: #00171F;
+    padding: 10px 0;
+}
+
+.submit-button{
+    --background : #003459;
+}

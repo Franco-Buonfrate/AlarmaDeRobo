@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+    <ion-img class="logo" src="../../assets/alarma.png"></ion-img>
+
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="finger-print"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button (click)="llenarUsuario('1')">
+          <img src="../../assets/usuarios/1ladron.png">
+        </ion-fab-button>
+        <ion-fab-button (click)="llenarUsuario('2')" >
+          <img src="../../assets/usuarios/2ladron.png">
+        </ion-fab-button>
+        <ion-fab-button (click)="llenarUsuario('3')">
+          <img src="../../assets/usuarios/3ladron.png">
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+  <form class="login-form" [formGroup]="formUser" >
+    <ion-label>
+      Direccion de correo
+      <ion-input 
+      class="email-input" 
+      type="mail" 
+      placeholder="ejem@ejem.com"
+      formControlName="email"
+       ></ion-input>
+    </ion-label>
+    <ion-label>
+      Contraseña
+      <ion-input 
+      class="password-input" 
+      type="password" 
+      placeholder=""
+      formControlName="password"
+      ></ion-input>
+    </ion-label>
+    <ion-button class="submit-button" (click)="login()">Ingresar</ion-button>
+  </form>
+
+ 
+</ion-content>

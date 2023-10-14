@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'alarmaDeRobo',
+  appId: 'com.buonfrate.alarmaDeRobo',
+  appName: 'alarma De Robo',
   webDir: 'www',
   bundledWebRuntime: false
 };

@@ -1,5 +1,6 @@
 ion-content{
     --ion-background-color:#050839;
+    overflow-y: hidden !important;
 }
 
 .login-form{
@@ -19,10 +20,9 @@ ion-content{
 .password-input, .email-input{
     border: 1px solid #00A7E1;
     border-radius: 6px ;
-    padding: 0 10px;
     background-color: #007EA7;
     color: #00171F;
-    padding: 10px 0;
+    
 }
 
 .submit-button{

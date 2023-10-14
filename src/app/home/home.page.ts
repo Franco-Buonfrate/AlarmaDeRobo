@@ -27,11 +27,11 @@ export class HomePage  {
   accelerationZ: any;
   subscription: any;
 
-  audioLeft = '/assets/sonidos/audioIzquierda.mp3';
-  audioRight = '/assets/sonidos/audioDerecha.mp3';
-  audioVertical = '/assets/sonidos/audioVertical.mp3';
-  audioHorizontal = '/assets/sonidos/audioHorizontal.mp3';
-  audioPass = '/assets/sonidos/audioPass.mp3';
+  audioLeft = '/assets/izquierda.mp3';
+  audioRight = '/assets/derecha.mp3';
+  audioVertical = '/assets/vertical.mp3';
+  audioHorizontal = '/assets/horizontal.mp3';
+  audioPass = '/assets/contraseña.mp3';
   audio = new Audio();
 
   firstAdmission: boolean = true;
@@ -86,13 +86,19 @@ export class HomePage  {
 
           this.currentPositionCellPhone = 'izquierda';
           this.moveLeft();
+          console.log("izquierda");
         } else if (acceleration.x < -5) {
           //Inclinacion Derecha
 
           this.currentPositionCellPhone = 'derecha';
           this.moveRight();
+          console.log("derecha");
+
         } else if (acceleration.y >= 9) {
           //encender flash por 5 segundos y sonido
+
+          console.log("arriba");
+
           this.currentPositionCellPhone = 'arriba';
 
           if (this.currentPositionCellPhone != this.previousPositionCellPhone) {
@@ -108,6 +114,8 @@ export class HomePage  {
           acceleration.x >= -1 &&
           acceleration.x <= 1
         ) {
+          console.log("acostado");
+
           //acostado vibrar por 5 segundos y sonido
           this.currentPositionCellPhone = 'plano';
           this.moveHorizontal();
@@ -124,6 +132,7 @@ export class HomePage  {
 
 
     if (this.firstAdmissionFlash) {
+      console.log('flash');
       this.firstAdmissionFlash ? this.flashlight.switchOn() : false;
       setTimeout(() => {
         this.firstAdmissionFlash = true;
